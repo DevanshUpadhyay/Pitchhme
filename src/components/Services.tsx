@@ -16,14 +16,13 @@ export default function Services() {
     "/images/webd/indianwebshows.png",
     "/images/webd/jainshree.png",
     "/images/webd/ok7.png",
-    "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
   const contentCreation = [
-    "https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=3425&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "/images/contentCreation/1.png",
+    "/images/contentCreation/2.png",
+    "/images/contentCreation/3.png",
+    "/images/contentCreation/4.png",
+    "/images/contentCreation/5.png",
   ];
   const socialMediaMarketing = [
     "https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -106,7 +105,7 @@ export default function Services() {
               </div>
               <div className="flex  items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-shopify                </span>
+Shopify                </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
@@ -136,11 +135,11 @@ shopify                </span>
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              Book your trip to{" "}
+              
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-                Bali
+                Content Creation
               </span>{" "}
-              now! ✈️
+              
             </h4>
             <div className="flex justify-center items-center">
               {contentCreation.map((image, idx) => (
@@ -174,32 +173,32 @@ shopify                </span>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
               <div className="flex  items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  5 connecting flights
+                  UI-UX Designs
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  12 hotels
+                  Content Writing
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  69 visiting spots
+                Short form content
                 </span>
               </div>
               <div className="flex  items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Good food everyday
+                  Podcasts
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Open Mic
+                  High Production shoot
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Paragliding
+                  Video Editing
                 </span>
               </div>
             </div>
@@ -219,11 +218,11 @@ shopify                </span>
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              Book your trip to{" "}
+              Social{" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-                Bali
+                Media
               </span>{" "}
-              now! ✈️
+              Marketing!
             </h4>
             <div className="flex justify-center items-center">
               {socialMediaMarketing.map((image, idx) => (
@@ -257,32 +256,32 @@ shopify                </span>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
               <div className="flex  items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  5 connecting flights
+                  Instagram
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  12 hotels
+                  Facebook
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  69 visiting spots
+                  Youtube
                 </span>
               </div>
               <div className="flex  items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Good food everyday
+                  LinkedIn
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Open Mic
+                  Meta Ads
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Paragliding
+                  Performace Marketing
                 </span>
               </div>
             </div>
@@ -302,11 +301,11 @@ shopify                </span>
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              Book your trip to{" "}
+              Everything is a 
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-                Bali
+                  Meme
               </span>{" "}
-              now! ✈️
+              !
             </h4>
             <div className="flex justify-center items-center">
               {memeMarketing.map((image, idx) => (
@@ -340,32 +339,32 @@ shopify                </span>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
               <div className="flex  items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  5 connecting flights
+                  Static Memes
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  12 hotels
+                  Meme Campaigns
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  69 visiting spots
+                  Video Memes
                 </span>
               </div>
               <div className="flex  items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Good food everyday
+                  Meme Marketing
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Open Mic
+                  Meme Advertising
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Paragliding
+                  Meme Promotion
                 </span>
               </div>
             </div>
