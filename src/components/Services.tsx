@@ -83,7 +83,7 @@ export default function Services() {
                     alt="bali images"
                     width="500"
                     height="500"
-                    className="rounded-lg h-10 w-18 md:h-20 md:w-36 object-cover flex-shrink-0"
+                    className="rounded-lg h-20 w-36 md:h-40 md:w-72 object-cover flex-shrink-0"
                   />
                 </motion.div>
               ))}
