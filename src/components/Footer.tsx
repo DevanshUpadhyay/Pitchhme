@@ -4,8 +4,8 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div>
-      <footer className="text-[#ffffff] body-font bg-[#000000]">
-        <div className="lg:max-w-[1300px] px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <footer className="text-[#ffffff]  ">
+        <div className="lg:max-w-[1300px]  px-5 mx-auto flex items-center sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center ">
             <Image
               src={"https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"}
@@ -13,7 +13,6 @@ const Footer = () => {
               width={200}
               height={100}
             />
-          
           </a>
           <p className="text-sm  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-white sm:py-2 sm:mt-0 mt-4">
             © 2024 Pitchme —
