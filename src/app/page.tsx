@@ -60,8 +60,8 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
       </div>
 
-      <HeroHighlight containerClassName=" flex flex-col items-center ">
-        <div id="home" className="w-full flex justify-center py-20">
+      <HeroHighlight containerClassName="lg:max-w-[1300px]  mx-auto ">
+        <div id="home" className="lg:max-w-[1300px] flex justify-center py-20">
           <Image
             src={"https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"}
             alt={"logo"}
@@ -70,7 +70,10 @@ export default function Home() {
           />
         </div>
 
-        <div id="about" className="relative w-full text-center py-20">
+        <div
+          id="about"
+          className="lg:max-w-[1300px]  relative w-full text-center py-20"
+        >
           <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
             <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
               Who are we?
@@ -85,7 +88,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="services" className="relative w-full text-center py-20">
+        <div
+          id="services"
+          className="lg:max-w-[1300px] relative w-full text-center py-20"
+        >
           <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
             <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
               What do we do?
@@ -118,7 +124,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Footer/>
+        <Footer />
       </HeroHighlight>
     </>
   );
