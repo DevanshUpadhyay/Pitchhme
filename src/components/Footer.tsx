@@ -1,142 +1,92 @@
-"use client";
-import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-import { ChangeEvent } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
-import { FloatingNav } from "@/components/ui/floating-navbar";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { HeroHighlight } from "@/components/ui/hero-highlight";
+import React from "react";
+import Image from "next/image";
 
-function SignupFormDemo() {
-  const router = useRouter();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("firstName", firstName);
-    formData.append("lastName", lastName);
-    formData.append("email", email);
-
-    const response = await fetch(
-      "https://ok7-ts-backend.adaptable.app/api/save-details",
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
-    router.push("/");
-  };
-
+const Footer = () => {
   return (
-    <div
-      style={{
-        background:
-          "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
-        backdropFilter: "blur(2px)",
-        WebkitBackdropFilter: "blur(2px)",
-        border: "1px solid rgba(255, 255, 255, 0.18)",
-        boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
-      }}
-      className="max-w-md scale-90 w-full mt-16 mx-auto rounded-none md:rounded-xl p-4 md:p-8 shadow-input bg-white dark:bg-transparent border"
-    >
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Welcome to Pitchhme
-      </h2>
-      <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input
-              value={firstName}
-              onChange={(e) => {
-                setFirstName(e.target.value);
-              }}
-              id="firstname"
-              placeholder="John"
-              type="text"
+    <div>
+      <footer className="text-[#ffffff] body-font bg-[#000000]">
+        <div className="lg:max-w-[1300px] px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a className="flex title-font font-medium items-center md:justify-start justify-center ">
+            <Image
+              src={"https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"}
+              alt={"logo"}
+              width={200}
+              height={100}
             />
-          </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input
-              id="lastname"
-              placeholder="Doe"
-              type="text"
-              value={lastName}
-              onChange={(e) => {
-                setLastName(e.target.value);
-              }}
-            />
-          </LabelInputContainer>
+          
+          </a>
+          <p className="text-sm  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-white sm:py-2 sm:mt-0 mt-4">
+            © 2024 Pitchme —
+            <a
+              href="https://twitter.com/knyttneve"
+              className=" ml-1"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              @Pitchme
+            </a>
+          </p>
+          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a className="">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                className="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a className="ml-3">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                className="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a className="ml-3 ">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                className="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a className="ml-3 ">
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                className="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
         </div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input
-            id="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            placeholder="john.dev@gmail.com"
-            type="email"
-          />
-        </LabelInputContainer>
-
-        <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Send Details &rarr;
-          <BottomGradient />
-        </button>
-      </form>
-    </div>
-  );
-}
-
-const BottomGradient = () => {
-  return (
-    <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
-    </>
-  );
-};
-
-const LabelInputContainer = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <div className={cn("flex flex-col space-y-2 w-full", className)}>
-      {children}
+      </footer>
     </div>
   );
 };
 
-const foot = () => {
-  return (
-    <>
-    <div className="flex-row ">
-      <div>
-        <SignupFormDemo />
-      </div>
-      <div className="flex items-end">
-      <button className="inline-flex h-12 my-20 w-screen animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-        Shimmer
-      </button>
-      </div>
-      </div>
-    </>
-  );
-};
-
-export default foot;
+export default Footer;

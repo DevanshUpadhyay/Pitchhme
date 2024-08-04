@@ -8,6 +8,8 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+
 
 export const FloatingNav = ({
   navItems,
@@ -40,6 +42,7 @@ export const FloatingNav = ({
       }
     }
   });
+
 
   return (
     <AnimatePresence mode="wait">
