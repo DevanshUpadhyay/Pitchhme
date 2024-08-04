@@ -1,5 +1,7 @@
 "use client";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { Boxes } from "@/components/ui/background-boxes";
+import { cn } from "@/lib/utils";
 import { FlipWords } from "@/components/ui/flip-words";
 import {TextRevealCard} from "@/components/ui/text-reveal-card";
 import { FloatingNav } from "@/components/ui/floating-navbar";
@@ -56,7 +58,8 @@ export default function Home() {
   return (
     <>
 
-    <div className="relative  w-full">
+
+ <div className="relative  w-full">
       <FloatingNav navItems={navItems} />
     </div>
 
