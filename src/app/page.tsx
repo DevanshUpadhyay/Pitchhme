@@ -10,6 +10,7 @@ import Campaigns from "@/components/Campaigns";
 import Clients from "@/components/Clients";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Enquiry from "@/components/Enquiry";
 
 const navItems = [
   {
@@ -52,6 +53,7 @@ const words = [
   "Organic-Content",
   "Web-Development",
 ];
+const dots = [".", "..", "...", "....", ".....", "......"];
 
 export default function Home() {
   return (
@@ -61,7 +63,7 @@ export default function Home() {
       </div>
 
       <HeroHighlight containerClassName="lg:max-w-[1300px]  mx-auto ">
-        <div id="home" className="lg:max-w-[1300px] flex justify-center py-20">
+        <div id="home" className="lg:max-w-[1300px] flex justify-center  -py-[20rem] ">
           <Image
             src={"https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"}
             alt={"logo"}
@@ -74,30 +76,33 @@ export default function Home() {
           id="about"
           className="lg:max-w-[1300px]  relative w-full text-center py-20"
         >
-          <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
-            <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
+          <div className="z-50 flex items-start justify-center text-white font-bold px-4  pointer-events-none text-3xl md:text-4xl lg:text-7xl">
+            <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 my-16">
               Who are we?
             </p>
           </div>
-          <div className="text-6xl mx-auto font-normal text-neutral-600 dark:text-neutral-400 mt-10">
+          <div className="text-6xl mx-auto font-normal text-white mt-10">
             We are a Content Marketing Firm specializing in
             <br />
             <div className="flex justify-center pt-10">
               <FlipWords words={words} />
+            </div>
+            <div className="flex justify-center pt-10">
+              <FlipWords words={dots} />
             </div>
           </div>
         </div>
 
         <div
           id="services"
-          className="lg:max-w-[1300px] relative w-full text-center py-20"
+          className="lg:max-w-[1300px] relative w-full text-center py-40"
         >
           <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
-            <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
+            <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 ">
               What do we do?
             </p>
           </div>
-          <div className="mt-10">
+          <div className="">
             <Services />
           </div>
         </div>
@@ -105,7 +110,7 @@ export default function Home() {
         <div id="campaigns" className="relative w-full text-center py-20">
           <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
             <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
-              ... and these are our meme campaigns!
+              These are our meme campaigns!
             </p>
           </div>
           <div className="mt-10">
@@ -113,15 +118,25 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="clients" className="relative w-full text-center py-20">
+        <div id="clients" className="relative w-full text-center py-28">
           <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
             <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
               Look who we worked for!
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 ">
             <Clients />
           </div>
+        </div>
+
+        <div id="enquiry" className="lg:w-max-[1300px]">
+          <div className="z-10 flex items-center justify-center w-full px-4 text-center lg:py-12">
+            <p className=" font-bold text-4xl  md:text-4xl lg:text-7xl bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 ">
+              Contact us & ask us to "Pitchhme"
+            </p>
+          </div>
+
+          <Enquiry />
         </div>
 
         <Footer />

@@ -17,7 +17,7 @@ import { HeroHighlight } from "@/components/ui/hero-highlight";
     },
     {
       name: "About",
-      link: "/about",
+      link: "/#about",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
@@ -29,21 +29,21 @@ import { HeroHighlight } from "@/components/ui/hero-highlight";
     },
     {
       name: "Campaigns",
-      link: "/campaigns",
+      link: "/#campaigns",
       icon: (
         <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
     {
       name: "Our Services",
-      link: "/services",
+      link: "/#services",
       icon: (
         <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
     {
       name: "Our Clients",
-      link: "/clients",
+      link: "/#clients",
       icon: (
         <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
