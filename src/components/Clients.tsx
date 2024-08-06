@@ -4,43 +4,43 @@ import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 const ClientsOne = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
+    name: "Netflix",
+    // designation: "Software Engineer",
     image:
       "/images/logos/1.jpg",
   },
   {
     id: 2,
-    name: "Robert Johnson",
-    designation: "Product Manager",
+    name: "Marvel",
+    // designation: "Product Manager",
     image:
       "/images/logos/2.jpg",
   },
   {
     id: 3,
-    name: "Jane Smith",
-    designation: "Data Scientist",
+    name: "Wings of Comfort",
+    // designation: "Data Scientist",
     image:
       "/images/logos/3.jpg",
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "UX Designer",
+    name: "Amazon miniTV",
+    // designation: "UX Designer",
     image:
       "/images/logos/4.jpg",
   },
   {
     id: 5,
-    name: "Tyler Durden",
-    designation: "Soap Developer",
+    name: "Applause",
+    // designation: "Soap Developer",
     image:
       "/images/logos/5.jpg",
   },
   {
     id: 6,
-    name: "Dora",
-    designation: "The Explorer",
+    name: "Realme",
+    // designation: "The Explorer",
     image:
       "/images/logos/6.jpg",
   },
@@ -49,43 +49,43 @@ const ClientsOne = [
 const ClientsTwo = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
+    name: "MX Player",
+    // designation: "Software Engineer",
     image:
       "/images/logos/7.jpg",
   },
   {
     id: 2,
-    name: "Robert Johnson",
-    designation: "Product Manager",
+    name: "MamaEarth",
+    // designation: "Product Manager",
     image:
       "/images/logos/8.jpg",
   },
   {
     id: 3,
-    name: "Jane Smith",
-    designation: "Data Scientist",
+    name: "Sony Liv",
+    // designation: "Data Scientist",
     image:
       "/images/logos/9.jpg",
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "UX Designer",
+    name: "Prime Video",
+    // designation: "UX Designer",
     image:
       "/images/logos/10.jpg",
   },
   {
     id: 5,
-    name: "Tyler Durden",
-    designation: "Soap Developer",
+    name: "TVF",
+    // designation: "Soap Developer",
     image:
       "/images/logos/11.jpg",
   },
   {
     id: 6,
-    name: "Dora",
-    designation: "The Explorer",
+    name: "Myntra",
+    // designation: "The Explorer",
     image:
       "/images/logos/12.jpg",
   },

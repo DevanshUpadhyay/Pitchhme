@@ -12,7 +12,7 @@ import { HeroHighlight } from "@/components/ui/hero-highlight";
 function SignupFormDemo() {
   const router = useRouter();
   const [firstName, setFirstName] = useState("");
-  const [budget, setBudget] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [company, setCompany] = useState("");
@@ -21,19 +21,20 @@ function SignupFormDemo() {
     e.preventDefault();
     const formData = new FormData();
     formData.append("firstName", firstName);
-    formData.append("budget", budget);
+    formData.append("lastName", lastName);
     formData.append("email", email);
 
     formData.append("mobile", mobile);
     formData.append("company", company);
 
-    const response = await fetch(
-      "https://ok7-ts-backend.adaptable.app/api/save-details",
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
+    const response = await fetch("http://localhost:4500/api/save-enquiry", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    
     router.push("/");
   };
 
@@ -65,14 +66,14 @@ function SignupFormDemo() {
             />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="budget">Last name</Label>
+            <Label htmlFor="lastName">Last name</Label>
             <Input
-              id="budget"
+              id="lastName"
               placeholder="Doe"
               type="text"
-              value={budget}
+              value={lastName}
               onChange={(e) => {
-                setBudget(e.target.value);
+                setLastName(e.target.value);
               }}
             />
           </LabelInputContainer>
