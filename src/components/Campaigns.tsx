@@ -13,7 +13,7 @@ export default function Campaigns() {
           // Preload hover image by setting it in a pseudo-element
           "before:bg-[url(/images/campaignGif/scamgif.gif)]",
           "hover:bg-[url(/images/campaignGif/scamgif.gif)]",
-          "hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-50",
+          "hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-10",
           "transition-all duration-500"
         )}
       >
@@ -28,7 +28,7 @@ export default function Campaigns() {
           // Preload hover image by setting it in a pseudo-element
           "before:bg-[url(/images/campaignGif/undekhi.gif)] ",
           "hover:bg-[url(/images/campaignGif/undekhi.gif)]",
-          "hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-50",
+          "hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-10",
           "transition-all duration-500"
         )}
       >
@@ -43,7 +43,7 @@ export default function Campaigns() {
           // Preload hover image by setting it in a pseudo-element
           "before:bg-[url(/images/campaignGif/mintree.gif)] ",
           "hover:bg-[url(/images/campaignGif/mintree.gif)]",
-          "hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-50",
+          "hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-10",
           "transition-all duration-500"
         )}
       >
@@ -58,7 +58,7 @@ export default function Campaigns() {
           // Preload hover image by setting it in a pseudo-element
           "before:bg-[url(/images/campaignGif/jmt.gif)] ",
           "hover:bg-[url(/images/campaignGif/jmt.gif)]",
-          "hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-50",
+          "hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-10",
           "transition-all duration-500"
         )}
       >
