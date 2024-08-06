@@ -62,8 +62,11 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
       </div>
 
-      <HeroHighlight containerClassName="lg:max-w-[1300px]  mx-auto ">
-        <div id="home" className="lg:max-w-[1300px] flex justify-center  -py-[20rem] ">
+      <HeroHighlight containerClassName=" w-screen mx-auto ">
+        <div
+          id="home"
+          className="lg:max-w-[1300px] flex justify-center  -py-[20rem] "
+        >
           <Image
             src={"https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"}
             alt={"logo"}
