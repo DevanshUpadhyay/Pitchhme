@@ -47,7 +47,7 @@ function SignupFormDemo() {
         border: "1px solid rgba(255, 255, 255, 0.18)",
         boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
       }}
-      className="max-w-md  scale-90 w-screen mt-16 mx-auto rounded-none md:rounded-xl  md:p-8 shadow-input bg-white dark:bg-transparent border"
+      className="max-w-md  scale-90 w-screen -mt-1 mx-auto rounded-none md:rounded-xl  md:p-8 shadow-input bg-white dark:bg-transparent border "
     >
     
       <form className="my-8" onSubmit={handleSubmit}>

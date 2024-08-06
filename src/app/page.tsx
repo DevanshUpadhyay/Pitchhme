@@ -63,7 +63,7 @@ export default function Home() {
       </div>
 
       <HeroHighlight containerClassName="lg:max-w-[1300px]  mx-auto ">
-        <div id="home" className="lg:max-w-[1300px] flex justify-center py-20">
+        <div id="home" className="lg:max-w-[1300px] flex justify-center  -py-[20rem] ">
           <Image
             src={"https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"}
             alt={"logo"}
@@ -95,10 +95,10 @@ export default function Home() {
 
         <div
           id="services"
-          className="lg:max-w-[1300px] relative w-full text-center py-20"
+          className="lg:max-w-[1300px] relative w-full text-center py-40"
         >
           <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
-            <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
+            <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 ">
               What do we do?
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="clients" className="relative w-full text-center py-20">
+        <div id="clients" className="relative w-full text-center py-28">
           <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
             <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
               Look who we worked for!
@@ -129,12 +129,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="enquiry">
-          <div className="z-50 flex items-start justify-center text-white font-bold px-4  pointer-events-none text-3xl md:text-4xl lg:text-7xl mb-2">
-            <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 mb-2">
+        <div id="enquiry" className="lg:w-max-[1300px]">
+          <div className="z-10 flex items-center justify-center w-full px-4 text-center lg:py-12">
+            <p className=" font-bold text-4xl  md:text-4xl lg:text-7xl bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 ">
               Contact us & ask us to "Pitchhme"
             </p>
           </div>
+
           <Enquiry />
         </div>
 

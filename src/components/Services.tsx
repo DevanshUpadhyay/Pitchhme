@@ -46,7 +46,11 @@ export default function Services() {
             Web Development
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-            ✈️
+            <img
+              className="object-cover h-8"
+              src="/images/services/webdev.png"
+              alt=""
+            />
           </div>
         </ModalTrigger>
         <ModalBody>
@@ -100,12 +104,13 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                Media-sharing website
+                  Media-sharing website
                 </span>
               </div>
               <div className="flex  items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-Shopify                </span>
+                  Shopify{" "}
+                </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
@@ -114,8 +119,7 @@ Shopify                </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                Business website
-
+                  Business website
                 </span>
               </div>
             </div>
@@ -129,17 +133,19 @@ Shopify                </span>
             Content Creation
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-            ✈️
+          <img
+              className="object-cover h-8"
+              src="/images/services/content.png"
+              alt=""
+            />
           </div>
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
                 Content Creation
               </span>{" "}
-              
             </h4>
             <div className="flex justify-center items-center">
               {contentCreation.map((image, idx) => (
@@ -183,7 +189,7 @@ Shopify                </span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                Short form content
+                  Short form content
                 </span>
               </div>
               <div className="flex  items-center justify-center">
@@ -212,7 +218,11 @@ Shopify                </span>
             Social Media Marketing
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-            ✈️
+          <img
+              className="object-cover h-8"
+              src="/images/services/social.png"
+              alt=""
+            />
           </div>
         </ModalTrigger>
         <ModalBody>
@@ -295,15 +305,19 @@ Shopify                </span>
             Meme Marketing
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-            ✈️
+          <img
+              className="object-cover h-8"
+              src="/images/services/meme.png"
+              alt=""
+            />
           </div>
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              Everything is a 
+              Everything is a
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-                  Meme
+                Meme
               </span>{" "}
               !
             </h4>
@@ -374,4 +388,3 @@ Shopify                </span>
     </div>
   );
 }
-
