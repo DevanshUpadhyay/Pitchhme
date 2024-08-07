@@ -62,36 +62,41 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
       </div>
 
-      <HeroHighlight containerClassName=" w-screen mx-auto ">
+      <HeroHighlight containerClassName=" w-full mx-auto ">
         <div
           id="home"
-          className="lg:max-w-[1300px] flex justify-center  -py-[20rem] "
+          className="flex justify-center items-center py-20 w-full h-screen"
         >
-          <Image
-            src={"https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"}
-            alt={"logo"}
-            width={700}
-            height={600}
-          />
+          <div className="relative w-full max-w-[700px] px-4">
+            <Image
+              src="https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"
+              alt="logo"
+              layout="responsive"
+              width={700}
+              height={600}
+              className="w-full h-auto "
+            />
+          </div>
         </div>
-
         <div
           id="about"
-          className="lg:max-w-[1300px]  relative w-full text-center py-20"
+          className="flex items-center justify-center min-h-screen text-center py-10 md:py-20"
         >
-          <div className="z-50 flex items-start justify-center text-white font-bold px-4  pointer-events-none text-3xl md:text-4xl lg:text-7xl">
-            <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 my-16">
-              Who are we?
-            </p>
-          </div>
-          <div className="text-6xl mx-auto font-normal text-white mt-10">
-            We are a Content Marketing Firm specializing in
-            <br />
-            <div className="flex justify-center pt-10">
-              <FlipWords words={words} />
+          <div className="w-full lg:max-w-[1300px] mx-auto">
+            <div className="z-50 flex items-start justify-center px-4 pointer-events-none">
+              <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-bold my-8 sm:my-12 md:my-16">
+                Who are we?
+              </p>
             </div>
-            <div className="flex justify-center pt-10">
-              <FlipWords words={dots} />
+            <div className="mx-auto font-normal text-white mt-6 sm:mt-8 md:mt-10 text-xl sm:text-xl md:text-2xl lg:text-4xl">
+              We are a Content Marketing Firm specializing in
+              <br />
+              <div className="flex justify-center pt-6 sm:pt-8 md:pt-10">
+                <FlipWords words={words} />
+              </div>
+              <div className="flex justify-center pt-6 sm:pt-8 md:pt-10">
+                <FlipWords words={dots} />
+              </div>
             </div>
           </div>
         </div>
@@ -100,7 +105,7 @@ export default function Home() {
           id="services"
           className="lg:max-w-[1300px] relative w-full text-center py-40"
         >
-          <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
+          <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-5xl md:text-4xl lg:text-7xl">
             <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 ">
               What do we do?
             </p>
@@ -111,7 +116,7 @@ export default function Home() {
         </div>
 
         <div id="campaigns" className="relative w-full text-center py-20">
-          <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-3xl md:text-4xl lg:text-7xl">
+          <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-5xl md:text-4xl lg:text-7xl">
             <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
               These are our meme campaigns!
             </p>
