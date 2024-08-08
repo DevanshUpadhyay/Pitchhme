@@ -106,7 +106,7 @@ export default function Home() {
           id="services"
           className="lg:max-w-[1300px] relative w-full text-center py-40"
         >
-          <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-5xl md:text-4xl lg:text-7xl">
+          <div className="z-50 flex items-start justify-center text-white font-bold px-4 pointer-events-none text-4xl md:text-4xl lg:text-7xl">
             <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 ">
               What do we do?
             </p>

@@ -4,7 +4,6 @@ import {
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalTrigger,
 } from "@/components/ui/animated-modal";
 import Image from "next/image";
@@ -39,10 +38,10 @@ export default function Services() {
     "/images/memes/meesho.jpg",
   ];
   return (
-    <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-center gap-8 py-28">
+    <div className="flex flex-col lg:flex-row lg:flex-wrap  justify-center items-center gap-8 py-16">
       <Modal>
         <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 overflow-hidden">
             Web Development
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -54,7 +53,7 @@ export default function Services() {
           </div>
         </ModalTrigger>
         <ModalBody>
-          <ModalContent>
+          <ModalContent >
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
               Get your own{" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
