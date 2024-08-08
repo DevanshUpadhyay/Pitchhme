@@ -38,55 +38,56 @@ export const AnimatedTooltip = ({
   };
 
   return (
-    <>
-      {items.map((item, idx) => (
-        <div
-          className="mr-8 relative group"
-          key={item.name}
-          onMouseEnter={() => setHoveredIndex(item.id)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <AnimatePresence mode="popLayout">
-            {hoveredIndex === item.id && (
-              <motion.div
-                initial={{ opacity: 0, y: 20, scale: 0.6 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                  transition: {
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 10,
-                  },
-                }}
-                exit={{ opacity: 0, y: 20, scale: 0.6 }}
-                style={{
-                  translateX: translateX,
-                  rotate: rotate,
-                  whiteSpace: "nowrap",
-                }}
-                className="absolute -top-16 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
-              >
-                <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
-                <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
-                <div className="font-bold text-white relative z-30 text-base">
-                  {item.name}
-                </div>
-                {/* <div className="text-white text-xs">{item.designation}</div> */}
-              </motion.div>
-            )}
-          </AnimatePresence>
-          <Image
-            onMouseMove={handleMouseMove}
-            height={100}
-            width={100}
-            src={item.image}
-            alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-28 w-28 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
-          />
-        </div>
-      ))}
-    </>
+    <div className="flex flex-wrap gap-4 justify-center">
+    {items.map((item, idx) => (
+      <div
+        className="w-1/3 md:w-1/4 p-2 relative group"
+        key={item.name}
+        onMouseEnter={() => setHoveredIndex(item.id)}
+        onMouseLeave={() => setHoveredIndex(null)}
+      >
+        <AnimatePresence mode="popLayout">
+          {hoveredIndex === item.id && (
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.6 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 10,
+                },
+              }}
+              exit={{ opacity: 0, y: 20, scale: 0.6 }}
+              style={{
+                translateX: translateX,
+                rotate: rotate,
+                whiteSpace: "nowrap",
+              }}
+              className="absolute -top-16 translate-x-1/2 flex text-xs sm:text-sm md:text-base flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 sm:px-6 md:px-8 py-2"
+            >
+              <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
+              <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
+              <div className="font-bold text-white relative z-30 text-xs sm:text-sm md:text-base">
+                {item.name}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <Image
+          onMouseMove={handleMouseMove}
+          height={100}
+          width={100}
+          src={item.image}
+          alt={item.name}
+          className="object-cover !m-0 !p-0 object-top rounded-full h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 border-2 group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500"
+        />
+      </div>
+    ))}
+  </div>
+  
+
   );
 };

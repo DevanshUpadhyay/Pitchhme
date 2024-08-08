@@ -4,7 +4,6 @@ import {
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalTrigger,
 } from "@/components/ui/animated-modal";
 import Image from "next/image";
@@ -39,10 +38,10 @@ export default function Services() {
     "/images/memes/meesho.jpg",
   ];
   return (
-    <div className="py-40  flex items-center justify-center">
+    <div className="flex flex-col lg:flex-row lg:flex-wrap  justify-center items-center gap-8 py-16">
       <Modal>
-        <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+        <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
+          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 overflow-hidden">
             Web Development
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -54,7 +53,7 @@ export default function Services() {
           </div>
         </ModalTrigger>
         <ModalBody>
-          <ModalContent>
+          <ModalContent >
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
               Get your own{" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
@@ -92,7 +91,7 @@ export default function Services() {
               ))}
             </div>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
-              <div className="flex  items-center justify-center">
+              <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   E-commerce
                 </span>
@@ -107,7 +106,7 @@ export default function Services() {
                   Media-sharing website
                 </span>
               </div>
-              <div className="flex  items-center justify-center">
+              <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   Shopify{" "}
                 </span>
@@ -128,12 +127,12 @@ export default function Services() {
       </Modal>
 
       <Modal>
-        <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
+        <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Content Creation
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-          <img
+            <img
               className="object-cover h-8"
               src="/images/services/content.png"
               alt=""
@@ -177,7 +176,7 @@ export default function Services() {
               ))}
             </div>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
-              <div className="flex  items-center justify-center">
+              <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   UI-UX Designs
                 </span>
@@ -192,7 +191,7 @@ export default function Services() {
                   Short form content
                 </span>
               </div>
-              <div className="flex  items-center justify-center">
+              <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   Podcasts
                 </span>
@@ -213,12 +212,12 @@ export default function Services() {
       </Modal>
 
       <Modal>
-        <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
+        <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Social Media Marketing
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-          <img
+            <img
               className="object-cover h-8"
               src="/images/services/social.png"
               alt=""
@@ -264,7 +263,7 @@ export default function Services() {
               ))}
             </div>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
-              <div className="flex  items-center justify-center">
+              <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   Instagram
                 </span>
@@ -279,7 +278,7 @@ export default function Services() {
                   Youtube
                 </span>
               </div>
-              <div className="flex  items-center justify-center">
+              <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   LinkedIn
                 </span>
@@ -300,12 +299,12 @@ export default function Services() {
       </Modal>
 
       <Modal>
-        <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
+        <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Meme Marketing
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-          <img
+            <img
               className="object-cover h-8"
               src="/images/services/meme.png"
               alt=""
@@ -351,7 +350,7 @@ export default function Services() {
               ))}
             </div>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
-              <div className="flex  items-center justify-center">
+              <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   Static Memes
                 </span>
@@ -366,7 +365,7 @@ export default function Services() {
                   Video Memes
                 </span>
               </div>
-              <div className="flex  items-center justify-center">
+              <div className="flex items-center justify-center">
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   Meme Marketing
                 </span>
