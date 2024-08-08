@@ -58,26 +58,27 @@ const dots = [".", "..", "...", "....", ".....", "......"];
 export default function Home() {
   return (
     <>
-      <div className="lg:max-w-[1300px] mx-auto">
+      <div className="lg:max-w-[1300px] mx-auto flex justify-center">
         <FloatingNav navItems={navItems} />
       </div>
 
       <HeroHighlight containerClassName=" w-full mx-auto ">
         <div
           id="home"
-          className="flex justify-center items-center py-20 w-full h-screen"
+          className="flex justify-center items-center py-10 md:py-20 w-full h-screen"
         >
-          <div className="relative w-full max-w-[700px] px-4">
+          <div className="relative w-full max-w-[80%] sm:max-w-[70%] md:max-w-[80%] lg:max-w-[700px] px-4">
             <Image
               src="https://i.ibb.co/R4653Hf/PITCHHME-FULL-LOGO.png"
               alt="logo"
               layout="responsive"
               width={700}
               height={600}
-              className="w-full h-auto "
+              className="w-full h-auto"
             />
           </div>
         </div>
+
         <div
           id="about"
           className="flex items-center justify-center min-h-screen text-center py-10 md:py-20"
@@ -121,7 +122,7 @@ export default function Home() {
               These are our meme campaigns!
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 ">
             <Campaigns />
           </div>
         </div>
