@@ -5,112 +5,71 @@ import { ChangeEvent } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { FloatingNav } from "@/components/ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { HeroHighlight } from "@/components/ui/hero-highlight";
 
-function SignupFormDemo() {
+function  SignupFormDemo() {
   const router = useRouter();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [company, setCompany] = useState("");
-
+  const [firstName,setFirstName] = useState('');
+  const [lastName,setLastName] = useState('');
+  const [email,setEmail] = useState('');
+  const [mobile,setMobile] = useState('');
+  const [company,setCompany] = useState('');
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("firstName", firstName);
-    formData.append("lastName", lastName);
-    formData.append("email", email);
-
-    formData.append("mobile", mobile);
-    formData.append("company", company);
-
-    const response = await fetch("http://localhost:4500/api/save-enquiry", {
-      method: "POST",
-      body: formData,
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
+    formData.append('firstName',firstName);
+    formData.append('lastName',lastName);
+    formData.append('email',email);
+    formData.append('company',company);
+    formData.append('mobile',mobile);
+    console.log(formData);
+    
+    const response = await fetch('http://localhost:4500/api/save-career',{
+      method: 'POST',
+      body: formData
     });
-    
-    router.push("/");
+    router.push('/');
   };
-
   return (
-    <div
-      style={{
-        background:
-          "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
-        backdropFilter: "blur(2px)",
-        WebkitBackdropFilter: "blur(2px)",
-        border: "1px solid rgba(255, 255, 255, 0.18)",
-        boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
-      }}
-      className="max-w-md  scale-90 w-screen -mt-1 mx-auto rounded-none md:rounded-xl  md:p-8 shadow-input bg-white dark:bg-transparent border "
-    >
-    
+    <div style={{
+      background:
+    "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
+    backdropFilter: "blur(2px)",
+    WebkitBackdropFilter: "blur(2px)",
+    border: "1px solid rgba(255, 255, 255, 0.18)",
+   boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)"
+    }} className="max-w-md scale-90 w-full mt-16 mx-auto rounded-none md:rounded-xl p-4 md:p-8 shadow-input bg-white dark:bg-transparent border">
+     
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input
-              value={firstName}
-              onChange={(e) => {
-                setFirstName(e.target.value);
-              }}
-              id="firstname"
-              placeholder="John"
-              type="text"
-            />
+            <Input value={firstName} onChange={(e) => {setFirstName(e.target.value)}} id="firstname" placeholder="John" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastName">Last name</Label>
-            <Input
-              id="lastName"
-              placeholder="Doe"
-              type="text"
-              value={lastName}
-              onChange={(e) => {
-                setLastName(e.target.value);
-              }}
-            />
+            <Label htmlFor="lastname">Last name</Label>
+            <Input id="lastname" placeholder="Doe" type="text" value={lastName} onChange={(e)=> {setLastName(e.target.value)}} />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input
-            id="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            placeholder="john.dev@gmail.com"
-            type="email"
-          />
+          <Input id="email" value={email} onChange={(e) => {
+            setEmail(e.target.value)
+          }} placeholder="john.dev@gmail.com" type="email" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="mobile">Mobile</Label>
-          <Input
-            value={mobile}
-            onChange={(e) => {
-              setMobile(e.target.value);
-            }}
-            id="mobile"
-            placeholder="+91 999888222"
-            type="text"
-          />
+          <Input value={mobile} onChange={(e) => {setMobile(e.target.value)}} id="mobile" placeholder="+91 999888222" type="text" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="company">Company</Label>
+          <Label htmlFor="Company">Company</Label>
           <Input
+            id="company"
             value={company}
             onChange={(e) => {
-              setCompany(e.target.value);
+              setCompany(e.target.value)
             }}
-            id="company"
-            placeholder="Pitchhme"
+            placeholder="Comapny"
             type="text"
           />
         </LabelInputContainer>
@@ -126,6 +85,7 @@ function SignupFormDemo() {
     </div>
   );
 }
+
 
 const BottomGradient = () => {
   return (

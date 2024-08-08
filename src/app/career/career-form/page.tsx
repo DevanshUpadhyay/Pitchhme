@@ -67,6 +67,8 @@ function  SignupFormDemo() {
     formData.append('role',role);
     formData.append('mobile',mobile);
     if(resume) formData.append('resume',resume);
+    console.log(formData);
+    
     const response = await fetch('http://localhost:4500/api/save-career',{
       method: 'POST',
       body: formData
