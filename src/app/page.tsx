@@ -141,7 +141,7 @@ export default function Home() {
         <div id="enquiry" className="lg:w-max-[1300px]">
           <div className="z-10 flex items-center justify-center w-full px-4 text-center lg:py-12">
             <p className=" font-bold text-4xl  md:text-4xl lg:text-7xl bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 ">
-              Contact us & ask us to "Pitchhme"
+              Contact us & ask us to Pitchhme
             </p>
           </div>
 
