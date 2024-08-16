@@ -23,11 +23,11 @@ const navItems = [
     link: "#about",
     icon: <IconUser className="h-4 w-4 text-white" />,
   },
-  {
-    name: "Career",
-    link: "/career",
-    icon: <IconMessage className="h-4 w-4 text-white" />,
-  },
+  // {
+  //   name: "Career",
+  //   link: "/career",
+  //   icon: <IconMessage className="h-4 w-4 text-white" />,
+  // },
   {
     name: "Campaigns",
     link: "#campaigns",
