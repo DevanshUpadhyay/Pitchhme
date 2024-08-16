@@ -24,7 +24,7 @@ function  SignupFormDemo() {
     formData.append('mobile',mobile);
     console.log(formData);
     
-    const response = await fetch('http://localhost:4500/api/save-career',{
+    const response = await fetch('https://oldassignment.adaptable.app/api/save-career',{
       method: 'POST',
       body: formData
     });

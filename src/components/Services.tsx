@@ -40,7 +40,7 @@ export default function Services() {
   return (
     <div className="flex flex-col lg:flex-row lg:flex-wrap  justify-center items-center gap-8 py-16">
       <Modal>
-        <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
+        <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 overflow-hidden">
             Web Development
           </span>
@@ -127,8 +127,8 @@ export default function Services() {
       </Modal>
 
       <Modal>
-        <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+      <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
+      <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Content Creation
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -212,8 +212,8 @@ export default function Services() {
       </Modal>
 
       <Modal>
-        <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+      <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
+      <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Social Media Marketing
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -299,8 +299,8 @@ export default function Services() {
       </Modal>
 
       <Modal>
-        <ModalTrigger className="relative bg-black dark:bg-white dark:text-black text-white flex justify-center items-center group/modal-btn p-4 rounded-lg">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+      <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
+      <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Meme Marketing
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
