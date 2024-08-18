@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { ChangeEvent } from "react";
+import Loader from "@/components/ui/loader";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -9,12 +10,15 @@ import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 
 function  SignupFormDemo() {
   const router = useRouter();
+  const [loader,setLoader] = useState(false);
   const [firstName,setFirstName] = useState('');
   const [lastName,setLastName] = useState('');
   const [email,setEmail] = useState('');
   const [mobile,setMobile] = useState('');
   const [company,setCompany] = useState('');
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setLoader(true);
+
     e.preventDefault();
     const formData = new FormData();
     formData.append('firstName',firstName);
