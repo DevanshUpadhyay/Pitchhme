@@ -111,7 +111,7 @@ export default function Home() {
               What do we do?
             </p>
           </div>
-          <div className="">
+          <div className="lg:ml-0 ml-7">
             <Services />
           </div>
         </div>
