@@ -32,6 +32,8 @@ function  SignupFormDemo() {
       method: 'POST',
       body: formData
     });
+    setLoader(false);
+
     router.push('/');
   };
   return (
@@ -43,7 +45,8 @@ function  SignupFormDemo() {
     border: "1px solid rgba(255, 255, 255, 0.18)",
    boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)"
     }} className="max-w-md scale-90 w-full mt-16 mx-auto rounded-none md:rounded-xl p-4 md:p-8 shadow-input bg-white dark:bg-transparent border">
-     
+           {loader? <Loader /> : <></>}
+
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
