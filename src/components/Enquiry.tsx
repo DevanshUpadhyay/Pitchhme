@@ -1,88 +1,164 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { ChangeEvent } from "react";
+
 import Loader from "@/components/ui/loader";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 
-function  SignupFormDemo() {
+function SignupFormDemo() {
   const router = useRouter();
-  const [loader,setLoader] = useState(false);
-  const [firstName,setFirstName] = useState('');
-  const [lastName,setLastName] = useState('');
-  const [email,setEmail] = useState('');
-  const [mobile,setMobile] = useState('');
-  const [company,setCompany] = useState('');
+  const [loader, setLoader] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [company, setCompany] = useState("");
+  const [errors, setErrors] = useState<Record<string, string | null>>({});
+
+  const validateForm = () => {
+    const newErrors: Record<string, string | null> = {};
+
+    if (!firstName.trim()) newErrors.firstName = "First name is required";
+    if (!lastName.trim()) newErrors.lastName = "Last name is required";
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email format is invalid";
+    }
+    if (!mobile.trim()) {
+      newErrors.mobile = "Mobile number is required";
+    } else if (!/^\d{10}$/.test(mobile)) {
+      newErrors.mobile = "Mobile number must be 10 digits";
+    }
+    if (!company.trim()) newErrors.company = "Company is required";
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
     setLoader(true);
 
-    e.preventDefault();
     const formData = new FormData();
-    formData.append('firstName',firstName);
-    formData.append('lastName',lastName);
-    formData.append('email',email);
-    formData.append('company',company);
-    formData.append('mobile',mobile);
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
+    formData.append("email", email);
+    formData.append("company", company);
+    formData.append("mobile", mobile);
     console.log(formData);
-    
-    const response = await fetch('https://oldassignment.adaptable.app/api/save-career',{
-      method: 'POST',
-      body: formData
-    });
+
+    const response = await fetch(
+      "https://oldassignment.adaptable.app/api/save-career",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
     setLoader(false);
 
-    router.push('/');
+    router.push("/");
   };
+
   return (
-    <div style={{
-      background:
-    "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
-    backdropFilter: "blur(2px)",
-    WebkitBackdropFilter: "blur(2px)",
-    border: "1px solid rgba(255, 255, 255, 0.18)",
-   boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)"
-    }} className="max-w-md scale-90 w-full mt-16 mx-auto rounded-none md:rounded-xl p-4 md:p-8 shadow-input bg-white dark:bg-transparent border">
-           {loader? <Loader /> : <></>}
+    <div
+      style={{
+        background:
+          "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
+        backdropFilter: "blur(2px)",
+        WebkitBackdropFilter: "blur(2px)",
+        border: "1px solid rgba(255, 255, 255, 0.18)",
+        boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
+      }}
+      className="max-w-md w-full mt-8 mx-auto rounded-none md:rounded-xl p-4 md:p-8 bg-white dark:bg-transparent border shadow-input transition-all duration-300 ease-in-out"
+    >
+      {loader ? <Loader /> : null}
 
       <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+        <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input value={firstName} onChange={(e) => {setFirstName(e.target.value)}} id="firstname" placeholder="John" type="text" />
+            <Input
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              id="firstname"
+              placeholder="Your Name"
+              type="text"
+              className="w-full"
+            />
+            {errors.firstName && (
+              <span className="text-red-500 text-sm">{errors.firstName}</span>
+            )}
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Doe" type="text" value={lastName} onChange={(e)=> {setLastName(e.target.value)}} />
+            <Input
+              id="lastname"
+              placeholder="Your Last Name"
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              className="w-full"
+            />
+            {errors.lastName && (
+              <span className="text-red-500 text-sm">{errors.lastName}</span>
+            )}
           </LabelInputContainer>
         </div>
+
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" value={email} onChange={(e) => {
-            setEmail(e.target.value)
-          }} placeholder="john.dev@gmail.com" type="email" />
+          <Input
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Your Email"
+            type="email"
+            className="w-full"
+          />
+          {errors.email && (
+            <span className="text-red-500 text-sm">{errors.email}</span>
+          )}
         </LabelInputContainer>
+
         <LabelInputContainer className="mb-4">
           <Label htmlFor="mobile">Mobile</Label>
-          <Input value={mobile} onChange={(e) => {setMobile(e.target.value)}} id="mobile" placeholder="+91 999888222" type="text" />
+          <Input
+            value={mobile}
+            onChange={(e) => setMobile(e.target.value)}
+            id="mobile"
+            placeholder="Your Mobile Number"
+            type="text"
+            className="w-full"
+          />
+          {errors.mobile && (
+            <span className="text-red-500 text-sm">{errors.mobile}</span>
+          )}
         </LabelInputContainer>
+
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="Company">Company</Label>
+          <Label htmlFor="company">Company</Label>
           <Input
             id="company"
             value={company}
-            onChange={(e) => {
-              setCompany(e.target.value)
-            }}
-            placeholder="Comapny"
+            onChange={(e) => setCompany(e.target.value)}
+            placeholder="Your Company Name"
             type="text"
+            className="w-full"
           />
+          {errors.company && (
+            <span className="text-red-500 text-sm">{errors.company}</span>
+          )}
         </LabelInputContainer>
 
         <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] transition-all duration-200 hover:scale-105"
           type="submit"
         >
           Send Details &rarr;
@@ -92,7 +168,6 @@ function  SignupFormDemo() {
     </div>
   );
 }
-
 
 const BottomGradient = () => {
   return (

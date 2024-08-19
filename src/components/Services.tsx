@@ -53,7 +53,7 @@ export default function Services() {
           </div>
         </ModalTrigger>
         <ModalBody>
-          <ModalContent >
+          <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
               Get your own{" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
@@ -61,7 +61,7 @@ export default function Services() {
               </span>{" "}
               website now!
             </h4>
-            <div className="flex justify-center items-center">
+            <div className="flex flex-col lg:flex-row   justify-center items-center">
               {webD.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -127,8 +127,8 @@ export default function Services() {
       </Modal>
 
       <Modal>
-      <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
-      <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+        <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
+          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Content Creation
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -146,7 +146,7 @@ export default function Services() {
                 Content Creation
               </span>{" "}
             </h4>
-            <div className="flex justify-center items-center">
+            <div className="flex flex-col lg:flex-row justify-center items-center">
               {contentCreation.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -212,8 +212,8 @@ export default function Services() {
       </Modal>
 
       <Modal>
-      <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
-      <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+        <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
+          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Social Media Marketing
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -233,7 +233,7 @@ export default function Services() {
               </span>{" "}
               Marketing!
             </h4>
-            <div className="flex justify-center items-center">
+            <div className="flex flex-col lg:flex-row justify-center items-center">
               {socialMediaMarketing.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -299,8 +299,8 @@ export default function Services() {
       </Modal>
 
       <Modal>
-      <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
-      <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+        <ModalTrigger className="relative bg-white text-black dark:text-black flex justify-center items-center group/modal-btn p-4 rounded-lg">
+          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Meme Marketing
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -320,7 +320,7 @@ export default function Services() {
               </span>{" "}
               !
             </h4>
-            <div className="flex justify-center items-center">
+            <div className="flex flex-col lg:flex-row justify-center items-center">
               {memeMarketing.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
