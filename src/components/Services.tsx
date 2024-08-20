@@ -11,9 +11,9 @@ import { motion } from "framer-motion";
 
 export default function Services() {
   const webD = [
-    "/images/webd/greentoe.png",
-    "/images/webd/indianwebshows.png",
-    "/images/webd/jainshree.png",
+    "https://i.ibb.co/3vtjQLG/greentoe.png",
+    "https://i.ibb.co/0cSg3T9/indianwebshows.png",
+    "https://i.ibb.co/0qNnpLv/jainshree.png",
   ];
   const contentCreation = [
     "/images/contentCreation/1.png",
@@ -81,7 +81,7 @@ export default function Services() {
                 >
                   <Image
                     src={image}
-                    alt="bali images"
+                    alt="Your network is weak"
                     width="500"
                     height="500"
                     className="rounded-lg h-20 w-36 md:h-40 md:w-72 object-cover flex-shrink-0"
