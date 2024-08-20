@@ -14,7 +14,6 @@ export default function Services() {
     "/images/webd/greentoe.png",
     "/images/webd/indianwebshows.png",
     "/images/webd/jainshree.png",
-    "/images/webd/ok7.png",
   ];
   const contentCreation = [
     "/images/contentCreation/1.png",
