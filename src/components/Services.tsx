@@ -61,7 +61,7 @@ export default function Services() {
               </span>{" "}
               website now!
             </h4>
-            <div className="flex flex-col lg:flex-row   justify-center items-center">
+            <div className="flex   justify-center items-center">
               {webD.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -146,7 +146,7 @@ export default function Services() {
                 Content Creation
               </span>{" "}
             </h4>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
+            <div className="flex justify-center items-center">
               {contentCreation.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -233,7 +233,7 @@ export default function Services() {
               </span>{" "}
               Marketing!
             </h4>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
+            <div className="flex justify-center items-center">
               {socialMediaMarketing.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -320,7 +320,7 @@ export default function Services() {
               </span>{" "}
               !
             </h4>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
+            <div className="flex  justify-center items-center">
               {memeMarketing.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
